@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 80px auto 300px;
+}
+
+nav {
+  grid-row: 1;
+}
+
+nav>div>a {
+  border: 1.3px red solid;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin-right: 15px;
+  background-color: white;
+  text-decoration: none;
+}
+
+nav>div>a:hover {
+background: linear-gradient(137deg, rgb(6, 6, 216) 40%, rgb(11, 6, 154) 60%);
+border:none;
+color: white;
+}
+
+section {
+  grid-row: 2;
+}
+
+#listbox>div {
+  width: 250px;
+  height: 75%;
+  border-right: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+#listbox>div:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#listbox>div:last-child {
+  border-right: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#listbox>div>button {
+  background-color: white;
+  border-radius: 30px;
+  padding: 7px 40px;
+  border: 1px solid orange;
+  margin-top: auto;
+  font-size: large;
+  font-weight: bold;
+}
+
+#listbox>div>button:hover {
+  background-color: orange;
+  color: white;
+}
+
+footer {
+  grid-row: 3;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-rows: auto auto;
+  column-gap: 20px;
+}
+
+iframe {
+  grid-row: 1/span 2;
+  grid-column: 1;
+  border-radius: 10px;
+}
+
+.textImg {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.seniorImg {
+  grid-column: 2;
+  grid-row: 2;
+}
